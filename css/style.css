@@ -1,0 +1,186 @@
+/* Font Montserrat */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  /* Propriedades universais da página */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  /* Retirada da linha a baixo dos links */
+  text-decoration: none;
+}
+body {
+  /* Corpo do site */
+  min-height: 100vh;
+  background: url(/assets/gif/background.gif) center center/cover;
+  overflow: auto;
+}
+.pagina {
+  /* DIV que pega a pagina inteira */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .containerMenu {
+    /* Header onde fica o menu */
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .menu {
+      /* Menu */
+      display: flex;
+      align-items: center; /* Centraliza o conteudo verticalmente no topo */
+      justify-content: center;
+      height: 80px;
+      margin-top: 1%;
+      width: 50%;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(3px);
+      background-color: rgba(255, 255, 255, 0.05);
+      position: relative;
+      gap: 30px; /* espaço entre logo e labels */
+
+      .labelLeft,
+      .labelRight {
+        /* Label da direita e esquerda da logo */
+        display: flex;
+        gap: 25px; /* espaço entre labels */
+        font-family: "Montserrat", sans-serif;
+
+        a {
+          /* Links da barra de menu */
+          font-size: 1.5rem;
+          color: #e2e2e2;
+        }
+        ul {
+          /* lista ordenada */
+          li {
+            /* itens da lista */
+            max-width: 80%;
+            display: inline-block;
+            list-style-type: none;
+            margin-right: 20px;
+            :hover {
+              /* efeito */
+              color: #0091ff;
+            }
+          }
+        }
+      }
+
+      .logoType {
+        /* DIV onde está localizado a "logo" e as redes sociais do menu */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-top: 7vh;
+
+        .redesSociais {
+          /* Bloco de redes sociais */
+          background: fixed;
+          display: flex;
+          position: relative;
+          justify-content: center;
+          font-size: 2.7rem;
+          z-index: 10;
+          top: -14px;
+
+          .linkedin {
+            /* Icone linkedin */
+            margin: 15px;
+          }
+        }
+      }
+
+      .logoMenu {
+        /* Imagem dentro do menu (centralizado) */
+        height: 150px;
+      }
+    }
+  }
+  .conteudo {
+    /* Bloco dos conteudos */
+    height: 79vh;
+    width: 80%;
+    margin-top: 18vh;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(3px);
+    background-color: rgba(255, 255, 255, 0.05);
+
+    .containerLeft {
+      /* Container da imagem */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 40vh;
+      width: 15vw;
+      margin: 3vh 0 0 2vw;
+      display: flex;
+
+      .foto {
+        /* Foto */
+        object-fit: cover;
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+      }
+    }
+
+    .containerRight {
+      /* Container direito */
+      justify-content: center;
+      align-items: center;
+      margin-top: -40vh;
+      margin-left: 20vw;
+      height: 73vh;
+      width: 57vw;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(1px);
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    /* Labels a baixo da foto */
+    .escrita {
+      height: 30vh;
+      width: 20%;
+      margin-top: -30vh;
+      margin-left: 1.6vw;
+      padding: 2vh 0 0 0;
+      border-radius: 6px;
+
+      #text {
+        /* Texto */
+        margin: 0.3vh 0.9vw 1vh 1vw;
+        color: #ffffff;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 1.2rem;
+        font-weight: 400;
+      }
+      #subText {
+        /* Sub-Texto */
+        margin: 0.3vh 0.9vw 1vh 1vw;
+        color: #ffffff;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 1.2rem;
+        font-weight: 400;
+      }
+    }
+  }
+}
